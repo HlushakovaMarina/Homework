@@ -1,7 +1,7 @@
 package Device;
 
 public class DeviceManager {
-    void printDevice(Device0 device) {
+    static void printDevice(Device0 device) {
         System.out.println(device);
     }
 

@@ -2,11 +2,11 @@ package Device;
 
 import java.util.Objects;
 
-public class Device0 {
+public class Device0 implements Cloneable{
     private final String serialNumber;
-    private static String model;
+    private String model;
     private static int totalDevices = 0;
-    private static int batteryLevel;
+    private int batteryLevel;
 
     public Device0(String serialNumber, String model) {
         this.serialNumber = serialNumber;
@@ -19,28 +19,28 @@ public class Device0 {
         return serialNumber;
     }
 
-    public static String getModel() {
+    public String getModel() {
         return model;
     }
 
-    public static void setModel(String model) {
-        Device0.model = model;
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public static int getTotalDevices() {
         return totalDevices;
     }
 
-    public static void setTotalDevices(int totalDevices) {
-        Device0.totalDevices = totalDevices;
+    public void setTotalDevices(int totalDevices) {
+        this.totalDevices = totalDevices;
     }
 
-    public static int getBatteryLevel() {
+    public int getBatteryLevel() {
         return batteryLevel;
     }
 
-    public static void setBatteryLevel(int batteryLevel) {
-        Device0.batteryLevel = batteryLevel;
+    public void setBatteryLevel(int batteryLevel) {
+        this.batteryLevel = batteryLevel;
     }
 
     @Override
@@ -61,6 +61,7 @@ public class Device0 {
     public int hashCode() {
         return Objects.hashCode(serialNumber);
     }
+
     @Override
     public Device0 clone() {
         try {
